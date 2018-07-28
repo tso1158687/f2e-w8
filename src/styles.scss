@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+$lightBlue:#1469FF;
+$deepBlue:#0027c8;
+$pink:#ff3c82;
+$black:#000000;
+$white:#ffffff;
+// font
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  font-family: "Noto Sans TC";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
