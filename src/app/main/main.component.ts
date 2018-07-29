@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { TweenLite } from 'gsap';
+import ScrollMagic from 'scrollmagic';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -33,15 +34,15 @@ export class MainComponent implements OnInit {
     const $star = $('.star');
     TweenLite.to($square, this.screenConfig.opening.duration, {
       rotation: 360,
-      ease: Power1.easeOut
+      // ease: Power1.easeOut
     });
     TweenLite.to($circle, this.screenConfig.opening.duration, {
       rotation: 360,
-      ease: Power2.easeOut
+      // ease: Power2.easeOut
     });
     TweenLite.to($star, this.screenConfig.opening.duration, {
       rotation: -360,
-      ease: Power2.easeOut
+      // ease: Power2.easeOut
     });
 
     TweenLite.to($circle, this.screenConfig.opening.duration / 2, {
@@ -74,15 +75,41 @@ export class MainComponent implements OnInit {
     const $square = $('.q1-square'); // top: 100
     const $triangle = $('.q1-triangle'); // top: 300
     const $circle = $('.q1-circle'); // bottom: -100
-    TweenLite.to($('.q1-left'), 2, {css: {backgroundColor: '#1469FF'}, delay: 0.5});
+    TweenLite.to($('.q1-left'), 2, {
+      css: { backgroundColor: '#1469FF' },
+      delay: 0.5
+    });
     // TweenLite.to($('.screenQ1 .animate-section'), 1, {css: {left: '60%'}, delay: 1});
-    TweenLite.to($square, 2, {css: {top: '100px'}, ease: Power3.easeOut, delay: 2});
-    TweenLite.to($triangle, 2, {css: {top: '300px'}, ease: Power2.easeOut, delay: 2});
-    TweenLite.to($circle, 2, {css: {bottom: '-100px'}, ease: Power2.easeOut, delay: 2});
+    TweenLite.to($square, 2, {
+      css: { top: '100px' },
+      // ease: Power3.easeOut,
+      delay: 2
+    });
+    TweenLite.to($triangle, 2, {
+      css: { top: '300px' },
+      // ease: Power2.easeOut,
+      delay: 2
+    });
+    TweenLite.to($circle, 2, {
+      css: { bottom: '-100px' },
+      // ease: Power2.easeOut,
+      delay: 2
+    });
 
-    TweenLite.to($square, 4, {rotation: 360, ease: Power3.easeOut, delay: 4});
-    TweenLite.to($triangle, 4, {rotation: -360, ease: Power2.easeOut, delay: 4});
-    TweenLite.to($circle, 4, {css: {x: '+=20', y: '+=30'}, ease: Power2.easeOut, delay: 4});
+    TweenLite.to($square, 4, {
+      rotation: 360,
+      // ease: Power3.easeOut,
+      delay: 4 });
+    TweenLite.to($triangle, 4, {
+      rotation: -360,
+      // ease: Power2.easeOut,
+      delay: 4
+    });
+    TweenLite.to($circle, 4, {
+      css: { x: '+=20', y: '+=30' },
+      // ease: Power2.easeOut,
+      delay: 4
+    });
   }
   goToQ2() {
     $('#question1').fadeOut('fast');
@@ -93,15 +120,41 @@ export class MainComponent implements OnInit {
     const $square = $('.q2-square'); // top: 100
     const $triangle = $('.q2-triangle'); // top: 300
     const $circle = $('.q2-circle'); // bottom: -100
-    TweenLite.to($('.q2-left'), 2, {css: {backgroundColor: '#1469FF'}, delay: 0.5});
+    TweenLite.to($('.q2-left'), 2, {
+      css: { backgroundColor: '#1469FF' },
+      delay: 0.5
+    });
     // TweenLite.to($('.screenQ1 .animate-section'), 1, {css: {left: '60%'}, delay: 1});
-    TweenLite.to($square, 2, {css: {top: '100px'}, ease: Power3.easeOut, delay: 2});
-    TweenLite.to($triangle, 2, {css: {top: '300px'}, ease: Power2.easeOut, delay: 2});
-    TweenLite.to($circle, 2, {css: {bottom: '-100px'}, ease: Power2.easeOut, delay: 2});
+    TweenLite.to($square, 2, {
+      css: { top: '100px' },
+      // ease: Power3.easeOut,
+      delay: 2
+    });
+    TweenLite.to($triangle, 2, {
+      css: { top: '300px' },
+      // ease: Power2.easeOut,
+      delay: 2
+    });
+    TweenLite.to($circle, 2, {
+      css: { bottom: '-100px' },
+      // ease: Power2.easeOut,
+      delay: 2
+    });
 
-    TweenLite.to($square, 4, {rotation: 360, ease: Power3.easeOut, delay: 4});
-    TweenLite.to($triangle, 4, {rotation: -360, ease: Power2.easeOut, delay: 4});
-    TweenLite.to($circle, 4, {css: {x: '+=20', y: '+=30'}, ease: Power2.easeOut, delay: 4});
+    TweenLite.to($square, 4, {
+      rotation: 360,
+      // ease: Power3.easeOut,
+      delay: 4 });
+    TweenLite.to($triangle, 4, {
+      rotation: -360,
+      // ease: Power2.easeOut,
+      delay: 4
+    });
+    TweenLite.to($circle, 4, {
+      css: { x: '+=20', y: '+=30' },
+      // ease: Power2.easeOut,
+      delay: 4
+    });
   }
   goToQ3() {
     $('#question2').fadeOut('fast');
@@ -112,14 +165,43 @@ export class MainComponent implements OnInit {
     const $square = $('.q3-square'); // top: 100
     const $triangle = $('.q3-triangle'); // top: 300
     const $circle = $('.q3-circle'); // bottom: -100
-    TweenLite.to($('.q3-left'), 2, {css: {backgroundColor: '#1469FF'}, delay: 0.5});
+    TweenLite.to($('.q3-left'), 2, {
+      css: { backgroundColor: '#1469FF' },
+      delay: 0.5
+    });
     // TweenLite.to($('.screenQ1 .animate-section'), 1, {css: {left: '60%'}, delay: 1});
-    TweenLite.to($square, 2, {css: {top: '100px'}, ease: Power3.easeOut, delay: 2});
-    TweenLite.to($triangle, 2, {css: {top: '300px'}, ease: Power2.easeOut, delay: 2});
-    TweenLite.to($circle, 2, {css: {bottom: '-100px'}, ease: Power2.easeOut, delay: 2});
+    TweenLite.to($square, 2, {
+      css: { top: '100px' },
+      // ease: Power3.easeOut,
+      delay: 2
+    });
+    TweenLite.to($triangle, 2, {
+      css: { top: '300px' },
+      // ease: Power2.easeOut,
+      delay: 2
+    });
+    TweenLite.to($circle, 2, {
+      css: { bottom: '-100px' },
+      // ease: Power2.easeOut,
+      delay: 2
+    });
 
-    TweenLite.to($square, 4, {rotation: 360, ease: Power3.easeOut, delay: 4});
-    TweenLite.to($triangle, 4, {rotation: -360, ease: Power2.easeOut, delay: 4});
-    TweenLite.to($circle, 4, {css: {x: '+=20', y: '+=30'}, ease: Power2.easeOut, delay: 4});
+    TweenLite.to($square, 4, {
+      rotation: 360,
+      // ease: Power3.easeOut,
+      delay: 4 });
+    TweenLite.to($triangle, 4, {
+      rotation: -360,
+      // ease: Power2.easeOut,
+      delay: 4
+    });
+    TweenLite.to($circle, 4, {
+      css: { x: '+=20', y: '+=30' },
+      // ease: Power2.easeOut,
+      delay: 4
+    });
   }
 }
+
+
+
